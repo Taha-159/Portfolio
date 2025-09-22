@@ -379,3 +379,68 @@ header nav a{
         );
     }
 }
+
+/* Mobile-first fixes */
+@media screen and (max-width: 767px) {
+    /* Intro tab - stack image and text */
+    #intro .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+        /* Fix Intro text overflow */
+    #intro .content .des {
+        width: 100%;
+        font-size: 0.9rem;   /* slightly smaller */
+        word-wrap: break-word;
+    }
+
+
+    
+    #intro .avatar {
+        text-align: center;
+        height: auto;
+    }
+    #intro .avatar img {
+        max-width: 200px;
+        height: auto;
+    }
+    #intro .content {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Experience tab - vertical timeline */
+    #experience .list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #experience .list .item {
+        width: 90%;
+        max-width: 350px;
+    }
+    #experience .list::before {
+        display: none; /* remove middle line on mobile */
+    }
+
+    /* Skills tab - 2 columns max */
+    #skill .list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+    }
+
+    /* Project tab - cards full width stacked */
+    #project .list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    #project .list .item {
+        width: 100%;
+    }
+}

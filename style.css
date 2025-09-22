@@ -380,6 +380,7 @@ header nav a{
     }
 }
 
+
 /* Mobile-first fixes */
 @media screen and (max-width: 767px) {
     /* Intro tab - stack image and text */
@@ -390,15 +391,13 @@ header nav a{
         text-align: center;
     }
 
-        /* Fix Intro text overflow */
+    /* Fix Intro text overflow */
     #intro .content .des {
         width: 100%;
         font-size: 0.9rem;   /* slightly smaller */
         word-wrap: break-word;
     }
 
-
-    
     #intro .avatar {
         text-align: center;
         height: auto;
@@ -428,10 +427,24 @@ header nav a{
         display: none; /* remove middle line on mobile */
     }
 
-    /* Skills tab - 2 columns max */
+    /* Skills tab - compact, polished layout */
     #skill .list {
         grid-template-columns: repeat(2, 1fr);
         padding: 10px;
+        gap: 10px; /* space between items */
+    }
+    #skill .list .item {
+        padding: 10px;
+    }
+    #skill .list .item i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+        box-shadow: 0 5px 8px #0004;
+    }
+    #skill .list .item .name {
+        font-size: 1.1em;
+        margin-top: 0.5em;
     }
 
     /* Project tab - cards full width stacked */
@@ -444,3 +457,5 @@ header nav a{
         width: 100%;
     }
 }
+
+
